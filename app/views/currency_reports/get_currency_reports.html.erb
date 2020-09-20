@@ -1,0 +1,22 @@
+<h3>2020-09-19</h3>
+<h3>Currency: EUR - <%= @rates["currency"] %></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rate</th>
+      <th>Date</th>
+      <th>Delta</th>
+    </tr>
+  </thead>
+
+  <tbody>
+   <% @rates["data"].each do |d| %>
+    <tr>
+      <td><%= d[1][0] %></td>
+      <td><%= d[1][1] %></td>
+      <td><%= d[1][2] %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
